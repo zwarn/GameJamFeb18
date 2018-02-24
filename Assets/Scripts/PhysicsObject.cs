@@ -26,10 +26,10 @@ public class PhysicsObject : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    void Start()
+	public virtual void Start()
     {
         contactFilter.useTriggers = false;
-        contactFilter.SetLayerMask(LayerMask.NameToLayer("Player"));
+		contactFilter.SetLayerMask(LayerMask.GetMask("Solid"));
         contactFilter.useLayerMask = true;
     }
 

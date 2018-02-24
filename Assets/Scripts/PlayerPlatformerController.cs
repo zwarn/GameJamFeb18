@@ -20,10 +20,17 @@ public class PlayerPlatformerController : PhysicsObject
         // animator = GetComponent<Animator>();
     }
 
-    void Start()
+    public override void Start()
     {
+		base.Start ();
         inputController = InputController.getInstance();
     }
+
+	void OnTriggerEnter2D(Collider2D coll) {
+		if (coll.tag == "Spike") {
+			transform.position = new Vector3 (-29.03f, 3.32f, 0f);
+		}
+	}
 
     protected override void ComputeVelocity()
     {
