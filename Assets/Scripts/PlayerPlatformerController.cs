@@ -12,12 +12,12 @@ public class PlayerPlatformerController : PhysicsObject
     private KeyCode jump = KeyCode.JoystickButton0;
 
     private SpriteRenderer spriteRenderer;
-   //  private Animator animator;
+    private Animator animator;
    
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     public override void Start()
@@ -50,9 +50,14 @@ public class PlayerPlatformerController : PhysicsObject
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
 
-        // animator.SetBool("grounded", grounded);
-        // animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
-
         targetVelocity = move * maxSpeed;
+
+        animator.SetBool("isJumping", !grounded);
+        if (velocity.x != 0)
+        {
+            animator.SetBool("isRuning", !grounded);
+        }
+
+
     }
 }
