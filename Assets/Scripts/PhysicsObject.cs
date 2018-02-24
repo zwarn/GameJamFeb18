@@ -29,7 +29,7 @@ public class PhysicsObject : MonoBehaviour
     void Start()
     {
         contactFilter.useTriggers = false;
-        contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
+        contactFilter.SetLayerMask(LayerMask.NameToLayer("Player"));
         contactFilter.useLayerMask = true;
     }
 
