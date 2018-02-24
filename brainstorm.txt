@@ -1,0 +1,23 @@
+If you see the light you know what's happening
+invisible
+Sploooosions
+
+puzzle game - plan execution of several moves (you don't see what happens live
+space alert?
+sidescroller invisible trough lasers?
+puzzle platformer remember platforms because they disappear once you move
+	do you have to see the level ever?
+	see dead bodies to have an idea of the level
+	respawn - multiplayer? race?
+	do you need to see yourself?
+	show entrance / exit?
+
+Leveldesign (Robin, Laura)
+Design / Graphics / Animation (Robin, Laura, Sibbel)
+MovementController / ControllerInputs (Micha)
+Enemies (Spikes etc. - things that hurt) (Paul, Bao)
+Menu / Starting Screen (Mieke)
+realize "invisibility" (ggf. Mieke)
+respawn (ggf. Mieke?)
+Multiplayer
+Sounds (Laura)
