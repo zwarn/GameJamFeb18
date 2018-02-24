@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InputController : MonoBehaviour {
-
-    private static InputController instance;
+    private static InputController instance = null;
     public bool IsVisible = true;
     public GameObject level;
-
     public static InputController getInstance()
     {
         return instance;
