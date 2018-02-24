@@ -20,8 +20,9 @@ public class PlayerPlatformerController : PhysicsObject
         // animator = GetComponent<Animator>();
     }
 
-    void Start()
+    public override void Start()
     {
+        base.Start();
         inputController = InputController.getInstance();
     }
 
