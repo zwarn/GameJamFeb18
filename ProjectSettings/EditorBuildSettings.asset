@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MainMenu/Scenes/Controls.unity
     guid: e31151469f9db41bb99384b804f43c3d
+  - enabled: 1
+    path: Assets/Scenes/movement.unity
+    guid: 541c1dde0407a05488477c3133b21566

@@ -8,12 +8,9 @@ public class ExplosionScript : MonoBehaviour {
 
     // Update is called once per frame
     public void splatter () {
-        if (Input.anyKey) {
-            foreach (Transform child in transform)
-            {
-                child.GetComponent<Rigidbody2D>().AddForce((child.position - transform.position).normalized * force);
-            }
-        }
-		
+        foreach (Transform child in transform)
+        {
+            child.GetComponent<Rigidbody2D>().AddForce((child.position - transform.position).normalized * force);
+        }		
 	}
 }
