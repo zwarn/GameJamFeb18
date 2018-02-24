@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour {
 
-    private static InputController instance;
+    private static InputController instance = null;
     public static InputController getInstance()
     {
         return instance;

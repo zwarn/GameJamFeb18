@@ -23,7 +23,7 @@ public class PlayerPlatformerController : PhysicsObject
 
     public override void Start()
     {
-        animator.SetBool("Alive", true);
+        animator.SetBool("isAlive", true);
         base.Start();
         inputController = InputController.getInstance();
     }
