@@ -104,6 +104,7 @@ MonoBehaviour:
   maxSpeed: 7
   jumpTakeOffSpeed: 14
   playerNumber: 2
+  splosion: {fileID: 1706247705602228, guid: ba4860b2ef44354409a2a07667cc0cdc, type: 2}
 --- !u!212 &212928938241383110
 SpriteRenderer:
   m_ObjectHideFlags: 1

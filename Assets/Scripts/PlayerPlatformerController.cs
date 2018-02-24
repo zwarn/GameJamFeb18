@@ -7,6 +7,7 @@ public class PlayerPlatformerController : PhysicsObject
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
     public int playerNumber = 1;
+    public GameObject splosion;
 
     private InputController inputController;
     private KeyCode jump = KeyCode.JoystickButton0;
@@ -59,5 +60,13 @@ public class PlayerPlatformerController : PhysicsObject
         }
 
 
+    }
+
+    public void die()
+    {
+        GameObject newSplosion = Instantiate(splosion, transform.position, Quaternion.identity);
+        newSplosion.GetComponent<ExplosionScript>().splatter();
+        transform.position = new Vector3(0, 0, 0);
+        
     }
 }
