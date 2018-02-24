@@ -54,9 +54,12 @@ public class PlayerPlatformerController : PhysicsObject
         targetVelocity = move * maxSpeed;
 
         animator.SetBool("isJumping", !grounded);
-        if (velocity.x != 0)
+        if (Mathf.Abs(velocity.x) < 0.1)
         {
-            animator.SetBool("isRuning", !grounded);
+            animator.SetBool("isRunning", false);
+        } else
+        {
+            animator.SetBool("isRunning", true);
         }
 
 
