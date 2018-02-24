@@ -16,6 +16,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 using UnityEngine.SceneManagement;
 
 public class GameManager_script : MonoBehaviour 
@@ -24,10 +25,13 @@ public class GameManager_script : MonoBehaviour
 	public GameObject mainMenuPanel;	//Connected to the Main Menu Panel
 	public GameObject gameOverPanel;	//Connected to the Game Over Panel
 	public static bool startGame = false;	//Boolean to know if the game started or not
-	public static bool gameOver = false;	//Boolean to know if the game is over or not
+	public static bool gameOver = false;    //Boolean to know if the game is over or not
+    public bool IsVisible = true;
+    public GameObject button;
 
-	// Update is called once per frame
-	void Update () 
+
+    // Update is called once per frame
+    void Update () 
     {
 		//If The player pressed Space button & The game didnt start yet
         if (Input.GetButtonDown("Jump") && startGame == false)
@@ -42,5 +46,29 @@ public class GameManager_script : MonoBehaviour
 			gameOver = false;		//Turn Game Over boolean to false
             SceneManager.LoadScene("MainGame");		//Load Main Game Scene
         }
-	}
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (IsVisible)
+            {
+                MakeInvisible();
+                IsVisible = false;
+            }
+            else
+            {
+                MakeVisible();
+                IsVisible = true;
+            }
+        }
+    }
+
+    public void MakeInvisible()
+    {
+        button.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 0f);
+    }
+
+    public void MakeVisible()
+    {
+        button.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+    }
 }

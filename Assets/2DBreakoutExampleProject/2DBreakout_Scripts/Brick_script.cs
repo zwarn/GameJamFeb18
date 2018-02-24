@@ -19,5 +19,33 @@ using UnityEngine;
 
 public class Brick_script : MonoBehaviour 
 {
-    public int score;		//How much points does this Brick will add to the score
+    public int score;       //How much points does this Brick will add to the score
+    public bool IsFront = true;
+
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.G))
+        {
+            if (IsFront)
+            {
+                MoveBack();
+                IsFront = false;
+            }
+            else
+            {
+                MoveFront();
+                IsFront = true;
+            }
+        }
+    }
+
+    public void MoveBack()
+    {
+        transform.SetAsFirstSibling();
+    }
+
+    public void MoveFront()
+    {
+        transform.SetAsLastSibling();
+    }
 }
