@@ -26,6 +26,8 @@ public class PlayerPlatformerController : PhysicsObject
         animator.SetBool("isAlive", true);
         base.Start();
         inputController = InputController.getInstance();
+        Debug.Log(gameObject.name);
+        Debug.Log(inputController == null);
     }
 
     protected override void ComputeVelocity()
