@@ -25,7 +25,7 @@ public class PhysicsObject : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
-
+		
 	public virtual void Start()
     {
         contactFilter.useTriggers = false;
@@ -74,7 +74,7 @@ public class PhysicsObject : MonoBehaviour
             hitBufferList.Clear();
             for (int i = 0; i < count; i++)
             {
-                hitBufferList.Add(hitBuffer[i]);
+               hitBufferList.Add(hitBuffer[i]);
             }
 
             for (int i = 0; i < hitBufferList.Count; i++)
